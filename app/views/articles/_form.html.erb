@@ -1,0 +1,43 @@
+<div class="card rounded">
+  <div class="card-body">
+    <div class="card-header bg-secondary">
+      <h1 class="card-title text-center text-light"><strong>New Article</strong></h1>
+        <%= form_with(model: article) do |form| %>
+    </div>
+      <% if article.errors.any? %>
+        <div id="error_explanation">
+          <h2><%= pluralize(article.errors.count, "error") %> prohibited this article from being saved:</h2>
+          <ul>
+            <% article.errors.each do |error| %>
+              <li><%= error.full_message %></li>
+            <% end %>
+          </ul>
+        </div>
+      <% end %>
+      <div class="field form-group">
+        <%= form.label :title %>
+        <%= form.text_field :title, class: "form-control" %>
+      </div>
+      <div class="field form-group">
+        <%= form.label :body %>
+        <%= form.text_area :body,class: "form-control" %>
+      </div>
+      <div id='comments'>
+        <h3>Add Comment</h3>
+          <%= form.fields_for :comments do |comment| %>
+            <%= render 'comment_fields', f: comment %>
+          <% end %>
+        <div class="links">
+          <%= link_to_add_association 'Add Comments', form, :comments  %>
+        </div>
+      </div>
+      <div>
+        <%= form.file_field :image %>
+      </div>
+        <%=form.hidden_field :user_id, value: current_user.id%>
+      <div class="actions mt-4">
+        <%= form.submit class: "btn btn-primary" %>
+      </div>
+    <% end %>
+  </div>
+</div>

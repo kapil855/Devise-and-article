@@ -1,0 +1,26 @@
+body{
+	background-color: lightgrey;
+}
+.div{
+		width:700px;
+		height:400px;
+		background-color:white;
+		box-shadow: 0 5px 10px 0 rgba(0,0,0,0.3),0 7px 21px 0 rgba(0,0,0,0.20);
+		box-sizing: border-box;
+		border-radius:15px;
+			}
+	.div1 {
+		width: 600px;
+		margin: 50px;
+	}
+	.hei{
+		margin-top: 50px;
+		margin-left: 200px;
+	}
+	.text-center {
+		text-align: center;
+		color: green;
+	}
+	label{
+		color: blue;
+	}

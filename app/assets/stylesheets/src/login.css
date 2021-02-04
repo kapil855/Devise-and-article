@@ -1,0 +1,17 @@
+
+	.div {
+		height:400px;
+		width: 500px;
+		margin: 70px 200px;
+		background-color:white;
+		box-shadow: 0 5px 10px 0 rgba(0,0,0,0.3),0 7px 21px 0 rgba(0,0,0,0.20);
+		box-sizing: border-box;
+		border-radius:15px;
+			}
+	.div1 {
+		width:400px;
+		margin:50px;
+
+	}
+	
+	
